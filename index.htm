@@ -30,17 +30,6 @@
 <div id="SBContentWrapper" style="overflow: hidden;"></div>
 <script src="sb-init.js?bust=1.0.0.202404300805_1728374908022" data-wrapper-id="SBContentWrapper" data-config='{ "scaleMobile": 2,"scaleDesktop": 2}'></script>
 <script>
-    window.onload = () => {
-        const iframe = document.querySelector('#SBContentWrapper iframe');
-        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-        const isIphone = /iPhone/.test(navigator.userAgent);
-        const button = iframeDoc.querySelector('#iQ1012J6BF029R7C2VMKCE4QPGO');
-
-        if(isIphone){
-            button.style.display = 'none';
-        }
-    }
-
     window.addEventListener("message",()=>{
         if(event.data === 'fullscreen'){
             const iframeContainer = document.querySelector('#SBContentWrapper');
